@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const arr=[1,2,3];
+        console.log(...arr);
+
+        //벼열의 추가
+        const num1=[10,20,30,...arr];
+        console.log(...num1);
+        console.log(num1);
+
+        //중간 추가
+        const num2=[10,20,arr,...arr,30];
+        const num3=[10,20,...arr,...arr,30];
+        console.log("num2--",...num2);
+        console.log("num3--",...num3);
+
+        const num4=[...arr];
+        console.log("num4--",...num4)
+
+    </script>
+
+
+</body>
+</html>

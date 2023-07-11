@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let list = [
+            {
+                "num": 1,
+                "title": "hello",
+                "info": ["banana", "apple"],
+                "profile": { "birth": "20201111", "img": "https://wwww.test.com/1" }
+            },
+            {
+                "num": 1,
+                "title": "hello",
+                "info": ["melon", "orange"],
+                "profile": { "birth": "20201212", "img": "https://wwww.test.com/2" }
+            }
+        ]
+
+        //두번째 객체의 title값
+        //기존문법
+        console.log(list[1].title)
+            //배열은 대괄호, 객체는 중괄호
+        let [,a]=list;
+        let [,{title:s}]=list;
+        let [,{info:[,b]}]=list;
+        let [{profile:{birth :bb , img}}]=list;
+        console.log("birth : "+bb,"img:"+img)
+        
+
+        console.log(s)
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //es5 in인덱스번호 for인덱스값
+        let arr=['a','b','c','d'];
+        for(let i in arr){
+            console.log(i);
+            //인덱스 번호 출력
+        }
+        //es6 - 향상된 포문의 형태(요소 삭제 x)
+        for(let i of arr){
+            console.log(i);
+            //인덱스의 값을 출력
+        }
+        //객체는 of 안됨
+        let person={name:'홍길동',age:20};
+        for(let i in person){
+            console.log(i);
+        }
+
+
+        //of와 구조분해 할당
+        const list=[{name:"홍길동",age:10},{name:"이순신",age:20}];
+        for(let {name,age} of list){
+            console.log(name)
+            console.log(age)
+        }
+
+    </script>
+</body>
+</html>

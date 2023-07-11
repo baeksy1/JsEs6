@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML5에서는 사용할 때는 type="module"을 반드시 적는다. -->
+    <script type="module">
+
+        //name export방식~~~~~~~~~
+
+        //가져오기 방식1
+        import {name,age,getInfo,sum,add} from './index01.js'
+        //상대경로로 갖고오기 --절대경로도 가능함!!
+
+        console.log(name);
+        console.log(age);
+        console.log(sum);
+        getInfo();
+        add(10);
+
+        console.log('=============');
+
+        //가져오기 방식2 -name export방식에서는 as 문장을 사용
+        import *as x from './index01.js';
+
+        console.log(x.name);
+        console.log(x.age);
+        x.add(40);
+        console.log(x.sum);
+        x.getInfo();
+
+        console.log('==========');
+        //가져오기 방식3
+        import {name as n, age as a}from './index01.js';
+
+        console.log(n);
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    var a= 10;
+    var a=10;
+
+
+    if(true){
+        var a=true;
+    }
+
+    let b=10;  //변수의 유효범위 중괄호
+    // let a='10';
+    console.log(b)
+    if(true){
+        let b=true;
+        console.log(b);//true
+    }
+    console.log(b);//10
+
+
+    const arr = [1,2,3];
+    arr[0]='홍길동';//내부요소 변경이 가능하지만
+    arr[1]='이순신';
+    arr.push('홍길자');
+    console.log(arr);
+    const person={name:'홍길동'};
+    person.name='이순신';//내부요소도 변경 가능
+    person.age=20;
+    console.log(person)
+
+
+
+    </script>
+
+
+</body>
+</html>

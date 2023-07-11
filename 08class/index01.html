@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //일반 html에서는 굳이 클래스를 생성할 필요는 없다
+        //멤버 변수 지칭할 떄 키워드를 사용하지 않는다
+        class Person{
+            //멤버변수
+            a='홍길동';
+            b=10;
+            c={};
+            //생성자 - constructor로 통일, 1개만 선언이 가능
+            constructor(b){
+                this.b=b;
+            }
+            //함수 -키워드 없이 가능
+            func = ()=>console.log('함수 1번');
+            func2() {console.log(this.a,this.b,this.c);}
+            
+
+
+
+        }
+        console.log(new Person().a);
+        console.log(new Person(20).b);
+        console.log(new Person(20).c);
+        new Person(20).func();
+        new Person(20).func2();
+
+        //객체 생성2
+        let p2=new Person(30);
+        
+
+
+    </script>
+
+
+
+</body>
+</html>

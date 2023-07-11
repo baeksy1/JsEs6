@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">버튼</button>
+
+
+
+    <script>
+
+        // onload=function(){
+        // }
+        // onload=()=>{
+
+        // }
+
+            document.getElementById("btn").onclick=()=>{}
+            document.getElementById("btn").addEventListener('click',()=>{});
+        //forEach, filter, map
+        //forEach(콜백(현재값,인덱스,현재배열))
+        const arr=['a','b','c','d'];
+        // arr.forEach(function(a,b,c){
+        //     console.log(a);//현재값
+        //     console.log(b);//인덱스
+        //     console.log(c);//현재배열
+        // });
+        arr.forEach((a,b,c) => {
+            console.log(a);//현재값
+            console.log(b);//인덱스
+            console.log(c);//현재배열
+        });
+        //값만 바로 출력
+        arr.forEach(a=>console.log(a));
+
+        console.log("aaaaaaaaaaaaaaaaaaaaaaaaa");
+
+        // arr.filter(콜백(현재값,인덱스,배열))-콜백에 true인 값을 받아서 새로운 배열로 리턴
+        const list=[1,2,3,4,5,6,7,8,9,10];
+        // const result=list.filter(function(a,b,c){
+        //     // return true;//그 값이 진짜면 result에 담아줌
+        //     return a%2==0;
+        // })
+        
+        const result=list.filter(a=>a%2==0);
+        
+        console.log(...result)
+
+
+        //5보다 큰 수만 필터로 반환
+        console.log(list.filter(a=>a>5))
+
+        //map(콜백(현재값,인덱스,현재 배열))
+        // const reuslt3=  list.map(function(a,b,c){
+        //     return '야';
+        // })
+        // console.log(reuslt3)
+   
+            const result4=list.map((a)=>{
+                return a+10;
+            })
+            console.log(...result4)
+   
+   </script>
+
+
+</body>
+</html>

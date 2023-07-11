@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // a();//익명함수 특: 당겨 쓰기 불가능
+
+        /* var a=function(){
+            console.log('a실행');
+        } */
+        let a=()=>console.log('a실행');
+        
+        a();//익명함수 특: 당겨 쓰기 불가능
+
+
+        ///////////////////////////////
+        //문법1 - 작성할 코드가 한줄이면 {}는 생략 가능
+        //       {}를 쓰지 않으면 기본값 undefind가 반환됨
+        //       {}를 쓰지 않고 , 구문을 작성하면, 자동으로 리턴값이 된다.
+        let b=(x)=> console.log(x);
+        b(2);
+        console.log(b(10));
+
+        let c=(x)=>x+10;
+        console.log(c(5));
+
+
+        ///////////////////////////////
+        //문법 2 - 매개변수가 1개라면 소괄호()생략 가능
+        let d=x=>x*10;
+        console.log(d(3))
+
+        let e=(x=10,y=20)=>x*y;//x,y디폴트 값 정해놓기
+
+        ///////////////////////////////
+        //문법 3- 객체를 반환할때는 ()로 묶어줍니다.
+        // let f=()=>{
+        //     return {name:'hong'};
+        // }
+            let f=()=>({name:'hong'});
+
+
+        console.log(f())
+
+
+    </script>
+
+
+
+</body>
+</html>

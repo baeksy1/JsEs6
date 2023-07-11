@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr=[1,2,3];
+        function sum(x,y,z){
+            return x+y+z;
+        }
+        console.log(sum(arr,2,3))//1,2,323
+
+        console.log(sum(...arr))//6
+        console.log(sum(10,20,...arr));
+
+        console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+        //가변 매개변수
+        function sum2(...x){
+            console.log(...x);
+            console.log(x);
+        }
+        sum2(1);
+        sum2(1,2);
+        sum2(1,2,3);
+        console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+        function sum3(y,...x){//...은 문법상 맨 뒤에 선언하는게 맞음
+            console.log(...x);
+            console.log(x);
+        }
+        sum3(1);
+        sum3(1,2);
+        sum3(1,2,3);
+        console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+
+        //함수의 default매개변수-함수 매개변수의 기본값
+        function sum4(x,y=19,z=123){
+            return x+y+z;
+        }
+        console.log(sum4(...arr))
+        console.log(sum4(1))
+        console.log(sum4(1,2))
+        
+        console.log(...arr+10);//1,2,310 배열에 적용이 되기 때문에 문자열로 붙음
+
+
+
+    </script>
+
+
+</body>
+</html>
